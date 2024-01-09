@@ -31,5 +31,9 @@
 > In the Docker Compose configuration, the `:ro` at the end of the volume mount (`/etc/nginx/nginx.conf:ro`) stands for "read-only." This means that the file or directory from the host machine is mounted into the container in read-only mode.
 > In the case of the Nginx container, the `nginx.conf` file is mounted into the container at the path `/etc/nginx/nginx.conf`, and it is marked as read-only (`:ro`). This ensures that the Nginx container can read the configuration but cannot modify it. It's a good practice to use read-only mounts for configuration files to enhance security and prevent accidental modifications within the container.
 
+2. What is use of `proxy_set_header Host $host;` in `nginx.conf`?
+> The `proxy_set_header Host $host;` directive in the `nginx.conf` file preserves the original `Host` header, ensuring accurate domain/subdomain information when forwarding requests to the Flask application.
+
+
 ### Why?
 - [**What is a DNS CNAME record?**](https://www.cloudflare.com/en-gb/learning/dns/dns-records/dns-cname-record/)
