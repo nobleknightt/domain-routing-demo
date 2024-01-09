@@ -30,3 +30,6 @@
 1. What is use of `:ro` in file `compose.yaml`?
 > In the Docker Compose configuration, the `:ro` at the end of the volume mount (`/etc/nginx/nginx.conf:ro`) stands for "read-only." This means that the file or directory from the host machine is mounted into the container in read-only mode.
 > In the case of the Nginx container, the `nginx.conf` file is mounted into the container at the path `/etc/nginx/nginx.conf`, and it is marked as read-only (`:ro`). This ensures that the Nginx container can read the configuration but cannot modify it. It's a good practice to use read-only mounts for configuration files to enhance security and prevent accidental modifications within the container.
+
+### Why?
+- [**What is a DNS CNAME record?**](https://www.cloudflare.com/en-gb/learning/dns/dns-records/dns-cname-record/)
